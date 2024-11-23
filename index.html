@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Map Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="mainContent">
+            <div id="map"></div>
+            <img id="cityImage" alt="City Image" style="display:none;">
+        </div>
+
+        <div class="sidebar">
+            <button id="viewMapButton">View Map of India</button>
+            <label for="citySelector" id="cityLabel">Select Your City:</label>
+            <select id="citySelector">
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Vizag">Vizag</option>
+                <option value="Guwahati">Guwahati</option>
+            </select>
+            <div class="links-section">
+                <h3>Links</h3>
+                <a href="https://mohua.gov.in/" target="_blank">Ministry of Housing and Urban Affairs</a>
+            </div>
+        </div>
+
+        <div class="hamburger">&#9776;</div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
