@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    position: absolute;
+    bottom: -300px; /* Initially hidden off-screen */
+    left: 0;
+    transition: bottom 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.sidebar.open {
+    bottom: 0;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute; /* Change to absolute */
+    bottom: 310px; /* Adjust to be just above the sidebar when it's open */
+    left: 10px;
+    z-index: 1000;
+    transition: bottom 0.3s ease; /* Add transition for smooth movement */
+}
+
+#viewMapButton {
+    display: block;
+    width: 100%;
+    margin-top: 1cm;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#cityLabel {
+    display: block;
+    margin-top: 20px; /* Creates gap between the button and label */
+    font-weight: bold;
+}
+
+#citySelector {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+.links-section {
+    margin-top: 20px;
+}
+
+.links-section h3 {
+    margin: 0 0 10px 0;
+}
+
+.links-section a {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+    margin: 5px 0;
+}
+
+#mainContent {
+    flex-grow: 1;
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#cityImage {
+    display: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
